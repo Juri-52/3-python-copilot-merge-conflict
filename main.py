@@ -1,5 +1,6 @@
 from inventory import Inventory
 from storage import load_products
+from sorting import sort_products
 
 
 def show_products(products):
@@ -17,11 +18,14 @@ def main():
     while True:
         print("\n商品管理")
         print("1: 商品一覧")
+        print("2: 価格が安い順に表示")
         print("0: 終了")
         choice = input("選択: ").strip()
 
         if choice == "1":
             show_products(inventory.get_all())
+        elif choice == "2":
+            show_products(sort_products(inventory.get_all()))
         elif choice == "0":
             print("終了します。")
             break
