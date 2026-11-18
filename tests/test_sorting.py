@@ -7,13 +7,9 @@ def test_price_order_keeps_original_list():
     cheap = Product(2, "消しゴム", "文房具", 80, 1)
     products = [expensive, cheap]
 
-<<<<<<< HEAD
-    assert sort_products(products) == [cheap, expensive]
-=======
     result = sort_products(products)
 
     assert result == [cheap, expensive]
->>>>>>> feature/sort
     assert products == [expensive, cheap]
 
 
