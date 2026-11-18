@@ -1,7 +1,7 @@
 from inventory import Inventory
-from search import search_products
 from storage import load_products
 from search import search_products
+from sorting import sort_products
 
 def show_products(products):
     if not products:
